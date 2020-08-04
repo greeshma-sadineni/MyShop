@@ -170,6 +170,7 @@
     <Compile Include="Controllers\AccountController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="Controllers\ManageController.cs" />
+    <Compile Include="Controllers\ProductManagerController.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
@@ -235,6 +236,11 @@
     <Content Include="Views\Manage\VerifyPhoneNumber.cshtml" />
     <Content Include="Views\Shared\Lockout.cshtml" />
     <Content Include="Views\Shared\_LoginPartial.cshtml" />
+    <Content Include="Views\ProductManager\Index.cshtml" />
+    <Content Include="Views\ProductManager\Create.cshtml" />
+    <Content Include="Views\ProductManager\Edit.cshtml" />
+    <Content Include="Views\ProductManager\Delete.cshtml" />
+    <Content Include="Views\ProductManager\Details.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
@@ -251,6 +257,24 @@
     <None Include="packages.config" />
     <Content Include="Scripts\jquery-3.4.1.slim.min.map" />
     <Content Include="Scripts\jquery-3.4.1.min.map" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\MyShop.core\MyShop.core.csproj">
+      <Project>{0eeb0f74-2de4-4d4e-8233-0e3b2262e0a7}</Project>
+      <Name>MyShop.core</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\MyShop.DAtaAccess.InMemory\MyShop.DAtaAccess.InMemory.csproj">
+      <Project>{5635d2fd-c018-4f97-be67-6ce0930e0e7f}</Project>
+      <Name>MyShop.DAtaAccess.InMemory</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\MyShop.DAtaAccessSQL\MyShop.DAtaAccessSQL.csproj">
+      <Project>{3e0728dd-64d8-4004-85d2-a6e2f1c710f1}</Project>
+      <Name>MyShop.DAtaAccessSQL</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\MyShop.Services\MyShop.Services.csproj">
+      <Project>{9831cfeb-ae2d-4e5b-b4dc-2ebeb010b9bd}</Project>
+      <Name>MyShop.Services</Name>
+    </ProjectReference>
   </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
