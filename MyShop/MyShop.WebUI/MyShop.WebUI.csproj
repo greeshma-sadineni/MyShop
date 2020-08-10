@@ -253,7 +253,6 @@
     <Content Include="Views\Shared\_LoginPartial.cshtml" />
     <Content Include="Views\ProductManager\Index.cshtml" />
     <Content Include="Views\ProductManager\Create.cshtml" />
-    <Content Include="Views\ProductManager\Edit.cshtml" />
     <Content Include="Views\ProductManager\Delete.cshtml" />
     <Content Include="Views\ProductManager\Details.cshtml" />
     <Content Include="Views\ProductCategoryManager\Create.cshtml" />
@@ -261,9 +260,11 @@
     <Content Include="Views\ProductCategoryManager\Details.cshtml" />
     <Content Include="Views\ProductCategoryManager\Delete.cshtml" />
     <Content Include="Views\ProductCategoryManager\Index.cshtml" />
+    <Content Include="Views\ProductManager\Edit.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
+    <Folder Include="Content\ProductImages\" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="fonts\glyphicons-halflings-regular.woff2" />
