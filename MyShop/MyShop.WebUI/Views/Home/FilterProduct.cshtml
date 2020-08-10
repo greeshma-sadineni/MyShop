@@ -1,5 +1,4 @@
 ﻿@model IEnumerable<MyShop.core.Models.Product>
-   
 @{
     ViewBag.Title = "Home Page";
 }
@@ -10,12 +9,10 @@
         <input type="submit" value="Filter" />
     </p>
 </form>
-@foreach (var item in Model)
-{
-    <li>
-        @Html.ActionLink(item.Category, "FilterProduct", "Home", new { Category = item.Category }, null)|
 
-    </li>}
+
+
+
 
 @foreach (var item in Model)
 {
