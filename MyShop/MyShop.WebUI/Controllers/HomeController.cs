@@ -65,6 +65,11 @@ namespace MyShop.WebUI.Controllers
 
             return View(filteredProduct);
         }*/
+        public ActionResult AddToBasket(string productid)
+        {
+            List<Product> products = context.Collection().ToList();
+
+        }
         public ActionResult Details(string id)
 
         {
