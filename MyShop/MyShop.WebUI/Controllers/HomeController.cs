@@ -17,20 +17,34 @@ namespace MyShop.WebUI.Controllers
     {           
         IRepository<Product>context;
         IRepository<ProductCategory> productCategories;
-        ProductManagerViewModel viewModel = new ProductManagerViewModel();
+       
         public HomeController(IRepository<Product> productContext, IRepository<ProductCategory> productCategoriesContext)
     {
         context = productContext;
         productCategories = productCategoriesContext;
     }
 
-      /*  public ActionResult Index()
+      public ActionResult Index( string category=null)
 
         {
-            List<Product> products =context.Collection().ToList();
-            return View(products);
-        }*/
-        public ActionResult Index(string searchString)
+            /* List<Product> products =context.Collection().ToList();
+             return View(products);*/
+            List<Product> products;
+            List<ProductCategory> categories = productCategories.Collection().ToList();
+            if(category == null)
+            {
+                products = context.Collection().ToList();
+            }
+            else
+            {
+                products = context.Collection().Where(p => p.Category == category).ToList();
+            }
+            ProductListViewModel model = new ProductListViewModel();
+            model.products = products;
+            model.productscategories = categories;
+            return View(model);
+        }
+      /*  public ActionResult Index(string searchString)
         {
             var products = from p in context.Collection()
                          select p;
@@ -50,7 +64,7 @@ namespace MyShop.WebUI.Controllers
 
 
             return View(filteredProduct);
-        }
+        }*/
         public ActionResult Details(string id)
 
         {
