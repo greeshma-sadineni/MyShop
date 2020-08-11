@@ -41,7 +41,7 @@ namespace MyShop.WebUI.Controllers
             }
             ProductListViewModel model = new ProductListViewModel();
             model.products = products;
-            model.productscategories = categories;
+            model.productsCategories = categories;
             return View(model);
         }
       /*  public ActionResult Index(string searchString)
