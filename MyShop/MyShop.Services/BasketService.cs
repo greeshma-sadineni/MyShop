@@ -128,7 +128,7 @@ using System.Web;
                                         join p in productContext.Collection() on item.ProductId equals p.Id
                                         select item.Quantity * p.Price).Sum();
                 model.BasketCount = basketCount ??0;
-                model.BasketTotal = basketCount ?? decimal.Zero;
+                model.BasketTotal = basketTotal ?? decimal.Zero;
                 return model;
                     }
             else
